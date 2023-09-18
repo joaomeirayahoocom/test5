@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Application Settings</h2>
+        <ul>
+            <li><h3>Environment Name:</h3><h4>@ViewData["EnvName"]</h4></li>
+            <li><h3>Level 2 Setting:</h3><h4>@ViewData["Level2Setting"]</h4></li>
+            <li><h3>Non-sticky Setting:</h3><h4>@ViewData["NonStickySetting"]</h4></li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Connection Strings</h2>
+        <ul>
+            <li><h3>Connection String:</h3><h4>@ViewData["ConnectionString"]</h4></li>
+        </ul>
+    </div>
+</div>
