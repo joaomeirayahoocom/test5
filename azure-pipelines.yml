@@ -16,5 +16,11 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(System.DefaultWorkingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Dev(b7cda313-770f-4cf7-89fd-81621c3709fd)'
+    appType: 'webApp'
+    appName: 'oneidas3'
+    package: '$(System.DefaultWorkingDirectory)/*.zip'
+    deploymentMethod: 'auto'
 
